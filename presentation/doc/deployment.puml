@@ -24,13 +24,13 @@ Deployment_Node(go, "Your Go app", "running on ..."){
     Container(go_proc, "Processing", "")
 }
 
-System_Ext(pxi, "PXI")
-System_Ext(crio, "cRIO")
-System_Ext(ic, "Industrial\nController")
+System_Ext(crio_1, "cRIO-1")
+System_Ext(crio_2, "cRIO-2")
+System_Ext(crio_3, "cRIO-3")
 
-Rel(pxi, redis, "Send", "TCP")
-Rel(crio, redis, "Send", "TCP")
-Rel(ic, redis, "Send", "TCP")
+Rel(crio_1, redis, "Send", "TCP")
+Rel(crio_2, redis, "Send", "TCP")
+Rel(crio_3, redis, "Send", "TCP")
 
 Rel(redis, lv_ta, "Read", "TCP")
 Rel(lv_ta, lv_ui, "Display")

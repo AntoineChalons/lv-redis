@@ -1,0 +1,32 @@
+[
+  {
+    "ip":"10.11.121.20",
+    "communication-method":"udp",
+    "port":4713,
+    "id":20
+  },
+  {
+    "ip":"10.11.121.21",
+    "communication-method":"udp",
+    "port":4713,
+    "id":21
+  },
+  {
+    "ip":"10.11.121.22",
+    "communication-method":"udp",
+    "port":4713,
+    "id":22
+  },
+  {
+    "ip":"10.11.121.23",
+    "communication-method":"udp",
+    "port":4713,
+    "id":23
+  },
+  {
+    "ip":"10.11.121.24",
+    "communication-method":"udp",
+    "port":4713,
+    "id":24
+  }
+]

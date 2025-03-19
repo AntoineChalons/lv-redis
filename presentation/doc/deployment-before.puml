@@ -1,4 +1,4 @@
-@startuml redis-demo-deployment
+@startuml before-redis
   !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
 'LAYOUT_LANDSCAPE()
 LAYOUT_WITH_LEGEND()

@@ -2,8 +2,7 @@
 
 ## assumptions
 
-- you can build your LabVIEW app on Linux
-- your LabVIEW app can work without a UI
+- you can have a Linux VM (WSL is ok)
 
 ## data-structures
 
@@ -12,5 +11,6 @@
 - Lists [ A > B > C ]
 - Sets {A,B,C,D}
 - Sorted Sets {A:0.1, B:0.3, C:100}
+- JSON
 
 May not be the best option for analog measurements

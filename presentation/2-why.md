@@ -18,8 +18,8 @@
   - [online university](https://university.redis.io/academy)
   - [active Discord server](https://redis.io/learn/community/discord)
 - the alternatives to share a database between a Linux RT Target and a Host (Windows/Linux/Mac) running a LabVIEW app are not as flexible
-- an VIPM package will exist soon (hopefully)
 - [A toolkit exits](https://forums.ni.com/t5/Example-Code/REDIS-database-LabVIEW-toolkit/ta-p/3508602) (it's embedded TCP, so it's easy to expand it)
+- There are a few GitHub public repo built from the toolkit linked above
 
 ## Top 5 usages
 

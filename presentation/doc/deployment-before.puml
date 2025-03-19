@@ -1,0 +1,32 @@
+@startuml redis-demo-deployment
+  !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
+'LAYOUT_LANDSCAPE()
+LAYOUT_WITH_LEGEND()
+
+title Before Redis
+
+
+Deployment_Node(lv, "My old LabVIEW app", "running on Windows"){
+    Container(parser, "Data Collection", "")
+    Container(lv_ta, "Time Aligner", "")
+    Container(lv_proc, "Processing", "")
+    Container(lv_ui, "User UI", "")
+    ContainerDb(TAB, "Map", "stored in DVR")
+}
+
+
+System_Ext(crio_1, "cRIO-1")
+System_Ext(crio_2, "cRIO-2")
+System_Ext(crio_3, "cRIO-3")
+
+Rel(crio_1, parser, "Send", "TCP")
+Rel(crio_2, parser, "Send", "TCP")
+Rel(crio_3, parser, "Send", "TCP")
+
+Rel(parser, lv_ta, "Send", "Queue")
+Rel(lv_ta, TAB, "Store", "Add to map")
+Rel(TAB, lv_proc, "Consume")
+Rel(TAB, lv_ui, "Consume")
+
+SHOW_LEGEND()
+@enduml

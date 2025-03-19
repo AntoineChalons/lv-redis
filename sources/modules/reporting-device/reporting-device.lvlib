@@ -92,7 +92,9 @@
 			<Item Name="Module Data--cluster.ctl" Type="VI" URL="../Module Data--cluster.ctl"/>
 		</Item>
 		<Item Name="clear-private-data.vi" Type="VI" URL="../clear-private-data.vi"/>
+		<Item Name="dvr-redis-get.vi" Type="VI" URL="../dvr-redis-get.vi"/>
 		<Item Name="init-private-data.vi" Type="VI" URL="../init-private-data.vi"/>
+		<Item Name="publish-measurements.vi" Type="VI" URL="../publish-measurements.vi"/>
 	</Item>
 	<Item Name="Module Sync" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -125,6 +127,4 @@
 	<Item Name="Main.vi" Type="VI" URL="../Main.vi">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="dvr-redis-get.vi" Type="VI" URL="../dvr-redis-get.vi"/>
-	<Item Name="publish-measurements.vi" Type="VI" URL="../publish-measurements.vi"/>
 </Library>

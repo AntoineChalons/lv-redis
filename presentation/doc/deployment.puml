@@ -1,0 +1,43 @@
+@startuml redis-demo-deployment
+  !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
+'LAYOUT_LANDSCAPE()
+LAYOUT_WITH_LEGEND()
+
+title Redis demo deployment
+
+Deployment_Node(redis-server, "Redis-server", "running on Ubuntu"){
+    ContainerDb(redis, "Redis", "In-memory DB")
+}
+
+Deployment_Node(lv, "Your LabVIEW app", "running on Windows"){
+    Container(lv_ta, "Data Collection", "")
+    Container(lv_ui, "User UI", "")
+}
+
+Deployment_Node(py, "Your Python app", "running on ..."){
+    Container(py_ta, "Data Collection", "")
+    Container(py_proc, "Processing", "")
+}
+
+Deployment_Node(go, "Your Go app", "running on ..."){
+    Container(go_ta, "Data Collection", "")
+    Container(go_proc, "Processing", "")
+}
+
+System_Ext(pxi, "PXI")
+System_Ext(crio, "cRIO")
+System_Ext(ic, "Industrial\nController")
+
+Rel(pxi, redis, "Send", "TCP")
+Rel(crio, redis, "Send", "TCP")
+Rel(ic, redis, "Send", "TCP")
+
+Rel(redis, lv_ta, "Read", "TCP")
+Rel(lv_ta, lv_ui, "Display")
+Rel(redis, py_ta, "Read", "TCP")
+Rel(py_ta, py_proc, "")
+Rel(redis, go_ta, "Read", "TCP")
+Rel(go_ta, go_proc, "")
+
+SHOW_LEGEND()
+@enduml

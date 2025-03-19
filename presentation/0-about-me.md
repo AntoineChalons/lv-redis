@@ -10,7 +10,7 @@
 ## What is Redis
 
 Redis (Remote Dictionary Server) is an open-source,
-in-memory data structure store that functions as a database, cache, and message broker1.
+in-memory data structure store that functions as a database, cache, and message broker.
 It's designed for high-speed data retrieval and manipulation, offering exceptional performance
 by storing data in memory rather than on disk or SSD.
 

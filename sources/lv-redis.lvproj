@@ -16,13 +16,13 @@
 		<Item Name="modules" Type="Folder">
 			<Item Name="reporting-device.lvlib" Type="Library" URL="../modules/reporting-device/reporting-device.lvlib"/>
 		</Item>
-		<Item Name="sandbox" Type="Folder">
-			<Item Name="launcher.vi" Type="VI" URL="../sandbox/launcher.vi"/>
-			<Item Name="user.vi" Type="VI" URL="../sandbox/user.vi"/>
-		</Item>
+		<Item Name="sandbox" Type="Folder"/>
 		<Item Name="testers" Type="Folder">
 			<Item Name="Test reporting-device API.vi" Type="VI" URL="../modules/reporting-device/Test reporting-device API.vi"/>
 		</Item>
+		<Item Name="consumer.vi" Type="VI" URL="../sandbox/consumer.vi"/>
+		<Item Name="launcher-a.vi" Type="VI" URL="../sandbox/launcher-a.vi"/>
+		<Item Name="launcher-b.vi" Type="VI" URL="../sandbox/launcher-b.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Redis.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/Zaphiro/GTools/Redis/Sources/Redis/Redis.lvclass"/>
